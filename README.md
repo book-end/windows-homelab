@@ -18,7 +18,7 @@ Each project contains:
 
 ## Projects
 
-### 1. Windows 11 Virtual Machine Setup
+### 1. [Windows 11 Virtual Machine Setup](./Windows%2011%20VM%20Setup/)
 Configuring the initial Windows environment using Oracle Virtual Box.
 
 Skills:
