@@ -34,11 +34,10 @@ Created an initial snapshot after completing the Windows installation and base v
 
 ## Troubleshooting
 
-### Issue 1: AMD-V Virtualization Unavailable
-During initial setup, VirtualBox displayed an error indicating that hardware virtualization was unavailable. The virtual machine could not start because the processor's virtualization features were disabled in the system firmware settings.
+### AMD-V Virtualization Unavailable
+**Issue:** During initial setup, VirtualBox displayed an error indicating that hardware virtualization was unavailable. The virtual machine could not start because the processor's virtualization features were disabled in the system firmware settings.
 
-### Resolution:
-Enabled SVM Mode (AMD virtualization) in the BIOS settings and restarted the host computer. After the change, VirtualBox successfully detected AMD-V support and the Windows 11 virtual machine started normally
+**Resolution:** Enabled SVM Mode (AMD virtualization) in the BIOS settings and restarted the host computer. After the change, VirtualBox successfully detected AMD-V support and the Windows 11 virtual machine started normally
 
 ## Concepts Learned
 ### Virtualization and Hypervisors
