@@ -35,7 +35,7 @@ Concepts explored:
 - Virtual machine snapshots
 - Basic Windows management tools
 
-Status: Complete
+**Status:** *Complete*
 
 ### [Windows Workstation Administration](./Windows%20Workstation%20Administration/)
 Configuring and managing a Windows workstation while practicing administrative and troubleshooting tasks performed in IT support and systems administration environments.
@@ -52,7 +52,7 @@ Planned concepts:
 - System information and inventory
 - Troubleshooting and documentation
 
-Status: In Progress
+**Status:** *In Progress*
 
 ## Planned Areas
 Future projects will cover the following concepts:
