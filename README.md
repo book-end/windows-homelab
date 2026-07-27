@@ -37,7 +37,7 @@ Concepts explored:
 
 Status: Complete
 
-### 2. Windows Administration
+### [Windows Workstation Administration](./Windows%20Workstation%20Administration/)
 Configuring and managing a Windows workstation while practicing administrative and troubleshooting tasks performed in IT support and systems administration environments.
 
 Planned concepts:
