@@ -82,7 +82,7 @@ Future projects will cover the following concepts:
 - Windows Server
 - PowerShell
 
-## Planned:
+### Planned:
 - DNS
 - DHCP
 - Group Policy
