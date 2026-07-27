@@ -11,7 +11,6 @@ New projects will be added as the environment develops and additional technologi
 Each project is stored in its own folder and may include:
 - Project overview
 - Environment and tools used
-- Objectives
 - Configuration documentation
 - Technical decisions
 - Troubleshooting notes
