@@ -80,11 +80,11 @@ Future projects will cover the following concepts:
 - Oracle VirtualBox
 - Windows 11
 - Windows Server
+- PowerShell
 
 ## Planned:
 - DNS
 - DHCP
-- PowerShell
 - Group Policy
 - Microsft Entra ID
 - Microsoft Azure
