@@ -1,100 +1,94 @@
-# Windows Home Lab
+# Windows Homelab
 
 ## Introduction
 This repository documents the configuration, and administration of a Windows-based environment focused on systems administration, cloud infrastructure, and security fundamentals.
 
-The projects in this repository cover virtualization, Windows adminstration, identity and access management, PowerShell automation, Active Directory, and Microsoft Azure. These projects explore concepts related to deploying, managing, troubleshooting, and securing enterprise IT environments.
+The projects explore concepts involved in deploying, managing, troubleshooting, and securing Windows systems. The environment begins with virtualization and workstation administration, then expands into eterprise infrastructure, identity management, cloud services, and security.
+
+New projects will be added as the environment develops and additional technologies are implemented.
 
 ## Repository Structure
-Each project contains:
+Each project is stored in its own folder and may include:
 - Project overview
-- Configuration steps
-- Technical documentation
+- Environment and tools used
+- Objectives
+- Configuration documentation
+- Technical decisions
 - Troubleshooting notes
+- Concepts explored
 - Screenshots
-- Key concepts learned
+- Scripts or configuration files
 
----
+The main repository README provides a high-level overview of the homelab, while each project README documents the technical work completed within that project.
 
 ## Projects
 
-### 1. [Windows 11 Virtual Machine Setup](./Windows%2011%20VM%20Setup/)
-Configuring the initial Windows environment using Oracle Virtual Box.
+### [Windows 11 Virtual Machine Setup](./Windows%2011%20VM%20Setup/)
+Configured a Windows 11 virtual machine using Oracle VirtualBox to establish the initial environment for future adminstration, infrastrcuture, and securty projects.
 
-Skills:
-- Virtualization
+Concepts explored:
+- Hardware virtualization
+- Hypervisors
+- Virtual machine creation
 - Windows installation
-- VM configuration
-- Guest Additions setup
+- Virtual CPU, memory, and storage allocation
+- Oracle VM VirtualBox Guest Additions
+- Virtual machine snapshots
+- Basic Windows management tools
 
 Status: Complete
 
 ### 2. Windows Administration
-Building foundational Windows administration skills through system configuration and troubleshooting.
+Configuring and managing a Windows workstation while practicing administrative and troubleshooting tasks performed in IT support and systems administration environments.
 
-Skills:
+Planned concepts:
 - Local users and groups
-- Serivces management
+- Administrator and standard user permissions
+- NTFS file and folder permissions
+- Window services
 - Event Viewer
-- Storage management
-- System troubleshooting
+- Disk and storage management
+- Windows Firewall
+- PowerShell fundamentals
+- System information and inventory
+- Troubleshooting and documentation
 
 Status: In Progress
 
-### 3. Active Directory
-Builiding a Windows Server environment focused on identity and access mamangement.
-
-Skills:
-- Domain services
-- Users and groups
+## Planned Areas
+Future projects will cover the following concepts:
+- Windows Server
+- Active Directory Domain Services
+- Domain controllers
 - Organizational units
-- Authentication concepts
-
-Status: Planned
-
-### 4. Group Policy & Security Configuration
-Exploring centralized Windows management and security controls
-
-Skills:
-- Group Policy Objects
-- Security policies
-- User permissions
-- System hardening concepts
-
-Status: Planned
-
-### 5. PowerShell Automation
-Creating scripts to automate common administrative tasks.
-
-Skills:
-- PowerShell scripting
-- System adminstration
-- Task automation
-- Inventory and reporting
-
-Status: Planned
-
-### 6. Microsoft Azure
-Expanding infrastructure concepts into cloud environments
-
-Skills:
-- Cloud infrastructure
-- Identity management
+- Group Policy
+- DNS and DHCP
+- Idenity and access management
+- PowerShell automation
+- Microsoft Azure
 - Microsoft Entra ID
-- Azure administration
-
-Status: Planned
-
---- 
+- Cloud access control
+- Windows security hardening
+- Logging and monitoring
+- Vulnerability management
+- Threat investigation
+- Security automation
+- AI-enabled threats and scams
+- AI application security
 
 ## Technologies
+### Current Used:
 - Oracle VirtualBox
 - Windows 11
 - Windows Server
-- PowerShell
-- Active Directory
-- Group Policy
+
+## Planned:
 - DNS
 - DHCP
-- Microsoft Entra ID
+- PowerShell
+- Group Policy
+- Microsft Entra ID
 - Microsoft Azure
+- Microsoft Defender
+- Security monitoring
+- Vulnerability management tools
