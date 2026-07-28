@@ -45,6 +45,9 @@ Created local accounts to simlulate different workstation access roles. The proc
 - `Add-LocalGroupMember` assigns uers to local groups
 - `Remove-LocalUser` removes unused local accounts
 
+### NTFS File and Folder Permissions
+Created test folders to test access control between administrator and standard user accounts. Configured permissions using the Security tab in folder properties. The `icacls` command was used to view assigned NTFS permissions and verify access settings.
+
 ## Troubleshooting
 ### Computer Rename Access Denied
 **Issue:** The computer rename command returned an "Access Denied" error.
@@ -53,9 +56,22 @@ Created local accounts to simlulate different workstation access roles. The proc
 
 **Solution:** Terminal was reopened with administrator privileges and the computer rename command was completed successfully.
 
+### Group Membership 
+
 ## Concepts Learned
 ### Local Users and Groups
 Windows uses local groups to organize user permissions and privilges. Assigning users to appropriate groups provides a structured method for managing access. Local accounts can be created, modified, and removed. 
+
+### Group-Based Access Control
+Windows manages permissions through a combiniation of user accounts, groups, and assigned permissions. Built-in local groups, such as Administrators and Users, already have predefined permission levels. Permissions are typically assigned to groups rather than individual users. For example, Admin01 was added to the local Administrators group. The Administrators group already has administrative privileges, so Admin01 inherited those permissions. 
+
+### NTFS File and Folder Permissions
+NTFS refers to New Technology File System which is the file system Windows uses for modern drives. NTFS permissions control access to files and folders on Windows systems. Permissions can be inherited by files and subfolders inside a directory. 
+
+Permission flags shown by `icacls` include:
+- `(F)` Full Control: grants complete access including modifying files, deleting files, and changing permissions
+- `OI` Object Inherit: applies permissions to files inside the folder
+- `CI` Container Inherit: apples permissions to subfolders inside the folder
 
 ## Screenshots
 
@@ -65,4 +81,14 @@ Windows uses local groups to organize user permissions and privilges. Assigning 
 ### Local Users and Groups Configuration
 ![User groups](screenshots/User%20groups.png)
 
+### Folder Structure
+![Folder Structure](screenshots/Folder%20Structure.png)
 
+### AdminOnly Folder Permissions Advanced Security Settings
+![AdminOnly Folder Permissions](screenshots/Advanced%20Securty.png)
+
+### `icacls` Output as Admin01
+![Admin01 Permissions](screenshots/admin01.png)
+
+### `icacls` Output as User01
+![User01 Permissions](screenshots/user01.png)
