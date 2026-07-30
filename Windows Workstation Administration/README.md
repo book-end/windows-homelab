@@ -66,7 +66,12 @@ Verified that the service changed from Running to Stopped and then returned to R
 
 **Solution:** Terminal was reopened with administrator privileges and the computer rename command was completed successfully.
 
-### Group Membership 
+### Service Management Permission Error
+**Issue:** When attempting to stop the Printer Spooler service with PowerShell using `Stop-Service`, the command returned an access-related error.
+
+**Cause:** The Windows Terminal was not opened as administrator.
+
+**Solution:** Terminal was reopened as administrator and the Printer Spooler service was successfully stopped.
 
 ## Concepts Learned
 ### Local Users and Groups
