@@ -58,6 +58,9 @@ In PowerShell, `Get-Service` was used to verify that its status changed from Run
 
 Verified that the service changed from Running to Stopped and then returned to Running.
 
+### Windows Storage Management
+Used Disk Management to create and attach a 2GB fixed VHDX to the Windows 11 virtual machine. Initialized the disk using GPT, created a simple volume, formatted it with NTFS, and assigned the drive letter E:. Verified the completed LabStorage volume through Disk Management, File Explorer, Get-Disk, and Get-Volume.
+
 ## Troubleshooting
 ### Computer Rename Access Denied
 **Issue:** The computer rename command returned an "Access Denied" error.
@@ -102,6 +105,11 @@ Windows services are background processes that support operating system features
 
 Administrative privileges are required to modify many system services.
 
+### Windows Storage
+A new disk must be initialized and configured before Windows can use it for file storage. A VHDX is a virtual hard disk file that Windows can attach and manage like a physical disk. The VHDX provided a safe way to practice adding and configuring storage without modifying the VM's main system disk. 
+
+GPT defines the disk's partition structure, while a volume represents usable storage created from the available disk space. NTFS provides the file system used to organize data and support Windows features such as permissions. A drive letter gives Windows and users a path for accessing the volume. 
+
 ## Screenshots
 
 ### Windows Environment Verification
@@ -133,3 +141,9 @@ Administrative privileges are required to modify many system services.
 
 ### Printer Spooler in PowerShell
 ![Printer Spooler in PowerShell](screenshots/Spooler%20PowerShell.png)
+
+### Initialized Virtual Disk called LabStorage in GUI
+![VHD GUI](screenshots/VHD%20GUI.png)
+
+### Initialized Virtual Disk called LabStorage with PowerShell
+![VHD PowerShell](screenshots/VHD%20PowerShell.png)
