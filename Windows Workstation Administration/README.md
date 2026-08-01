@@ -61,6 +61,11 @@ Verified that the service changed from Running to Stopped and then returned to R
 ### Windows Storage Management
 Used Disk Management to create and attach a 2GB fixed VHDX to the Windows 11 virtual machine. Initialized the disk using GPT, created a simple volume, formatted it with NTFS, and assigned the drive letter E:. Verified the completed LabStorage volume through Disk Management, File Explorer, Get-Disk, and Get-Volume.
 
+### Windows Defender Firewall
+Reviewed the Domain, Private, and Public firewall profiles through Windows Defender Firewall with Advanced Security and PowerShell. Used `Get-NetConnectionProfile` to confirm that the vm was connected through the Public network profile. Created an inbound firewall rule that allowed ICMPv4 echo requests on the Public profile. Used `Get-NetFirewallRule` to verify the rule, then used `Disable-NetFirewallRule` to change its status. Removed the test rule after completing the configuration and verification process using `Remove-NetFirewallRule`.
+
+Created an inbound
+
 ## Troubleshooting
 ### Computer Rename Access Denied
 **Issue:** The computer rename command returned an "Access Denied" error.
@@ -110,6 +115,45 @@ A new disk must be initialized and configured before Windows can use it for file
 
 GPT defines the disk's partition structure, while a volume represents usable storage created from the available disk space. NTFS provides the file system used to organize data and support Windows features such as permissions. A drive letter gives Windows and users a path for accessing the volume. 
 
+### Windows Firewall
+#### Firewall Profiles
+Windows Defender Firewall uses network profiles to apply different security settings based on the type of network connection.
+
+- **Domain** profile: used when a computer is connected to and authenticated with an Active Directory domainf
+- **Private** profile: for trusted networks, such as a home network or an internal network where other devices may need to communicate with the computer
+- **Public** profile: for untrusted networks, such as public Wi-Fi. Uses more restrictive settings because other devices on the network should not automatically be trusted.
+- 
+Enabled profile does not necessarily mean an active profile.
+
+#### Firewall Rules
+Windows Defender Firewall controls inbound and outbound network traffic based on defined rules.
+
+**Inbound** traffic begins outside the computer and is sent toward it, while **outbound** traffic begins on the computer and is sent to another system or service.
+
+Firewall rules can match traffic by direction, action, protocol, port, application, network profile, and IP address scope.
+
+The **ICMPv4** test rule allowed incoming echo requests, which are used by the ping command to test whether a system is reachable. The rule was limited to the Public profile, meaning it only applied while the current network connection was classified as Public. Rules can be disabled, re-enabled, or deleted.
+
+PowerShell firewall commands follow the Verb-Noun structure.
+- `New-NetFirewallRule` creates a new rule
+- `Get-NetFirewallRule` retrieves the rule
+- `Disable-NetFirewallRule` disables the rule
+- `Enable-NetFirewallRule` enables the rule
+- `Remove-NetFirewallRule` deletes the rule
+
+Windows Firewall is effective for controlling applications, ports, protocols, and IP addresses. Blocking a specific website is usually better handled through DNS or web filtering because website IP addresses may change or be shared with other services.
+
+**Firewall Rule Structure**
+ - `-DisplayName` assigns a name to the rule
+ - `-Direction` specificies whether the rule applies to inbound or outbound traffic
+ - `-Action` determines whether matching traffic is allowed or blocked
+ - `-Protocol` identifies the network protocol such as TCP, UDP, or ICMPv4
+ - `-LocalPort` identifies the port on local computer that receives or sends the traffic
+ - `-RemotePort` identifies the port used by the remote system
+ - `-Program` limits the rule to a specific application
+ - `-RemoteAddress` limits the rule to specific remote IP addresses
+ - `-Profile` determines which profile the rules applies to
+
 ## Screenshots
 
 ### Windows Environment Verification
@@ -139,7 +183,7 @@ GPT defines the disk's partition structure, while a volume represents usable sto
 ### Printer Spooler Service in GUI
 ![Print Spooler in GUI](screenshots/Print%20Spooler%20GUI.png)
 
-### Printer Spooler in PowerShell
+### Printer Spooler with PowerShell
 ![Printer Spooler in PowerShell](screenshots/Spooler%20PowerShell.png)
 
 ### Initialized Virtual Disk called LabStorage in GUI
@@ -147,3 +191,15 @@ GPT defines the disk's partition structure, while a volume represents usable sto
 
 ### Initialized Virtual Disk called LabStorage with PowerShell
 ![VHD PowerShell](screenshots/VHD%20PowerShell.png)
+
+### Firewall Profile in GUI
+![Firewall Profile GUI](screenshots/Firewall%20Profile%20GUI.png)
+
+### Firewall Profile with PowerShell
+![Firewall Profile PowerShell](screenshots/Firewall%20Profile%20Powershell%20.png)
+
+### Firewall Rule in GUI
+![Firewall Rule GUI](screenshots/Firewall%20Rule%20GUI.png)
+
+### Firewall Rule with PowerShell
+![Firewall Rule PowerShell](screenshots/Firewall%20Rule%20Powershell.png)
