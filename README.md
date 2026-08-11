@@ -38,9 +38,9 @@ Concepts explored:
 **Status:** *Complete*
 
 ### [Windows Workstation Administration](./Windows%20Workstation%20Administration/)
-Configuring and managing a Windows workstation while practicing administrative and troubleshooting tasks performed in IT support and systems administration environments.
+Configured and managed a Windows workstation while practicing administrative and troubleshooting tasks performed in IT support and systems administration environments.
 
-Planned concepts:
+Concepts Explored:
 - Local users and groups
 - Administrator and standard user permissions
 - NTFS file and folder permissions
@@ -52,7 +52,24 @@ Planned concepts:
 - System information and inventory
 - Troubleshooting and documentation
 
-**Status:** *In Progress*
+**Status:** *Complete*
+
+### [Windows Active Directory](./Windows%20Active%20Directory/)
+Building a Windows Server to practice centralized identity management and domain administration.
+
+Planned concepts:
+- Windows Server administration
+- Active Directory Domain Services
+- Domain controller configuration
+- DNS
+- Domain users and security groups
+- Organizational units
+- Domain-joined Windows clients
+- Group Policy
+- Domain-based permissions
+- Powershell administration
+
+**Status:** *In-Progress*
 
 ## Planned Areas
 Future projects will cover the following concepts:
