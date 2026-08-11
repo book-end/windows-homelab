@@ -81,6 +81,11 @@ Created an inbound
 
 **Solution:** Terminal was reopened as administrator and the Printer Spooler service was successfully stopped.
 
+### Blocked Script
+**Issue & Cause:** PowerShell blocked the script from running in terminal due to the system execution policy.
+
+**Solution**: A Process-scoped bypass was used to allow the script to run temporarily without changing the machine-wide policy. `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
+
 ## Concepts Learned
 ### Local Users and Groups
 Windows uses local groups to organize user permissions and privilges. Assigning users to appropriate groups provides a structured method for managing access. Local accounts can be created, modified, and removed. 
